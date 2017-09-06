@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 let hashFragment = '';
 let observer = null;
@@ -52,7 +52,7 @@ export function HashLink(props) {
     }
     if (hashFragment !== '') hashLinkScroll();
   }
-  return <Link {...props} onClick={handleClick}>{props.children}</Link>;
+  return <NavLink {...props} onClick={handleClick}>{props.children}</NavLink>;
 }
 
 HashLink.propTypes = {
